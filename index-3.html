@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AXE20 Logistique | Entreposage sécurisé de remorques, conteneurs et équipements</title>
+<meta name="description" content="AXE20 Logistique — Entreposage sécurisé de remorques, conteneurs et équipements. Secure trailer, container & equipment yards.">
+<link rel="icon" href="logo.png">
+<style>
+  :root{
+    --navy: #1b2f52;
+    --navy-dark: #16273f;
+    --orange: #d84b2a;
+    --bg: #f4f4f2;
+    --text-dark: #1a1a1a;
+    --text-gray: #7c8794;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body{
+    font-family: 'Arial Narrow', 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text-dark);
+  }
+
+  .hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+  }
+
+  .hero-content{
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6vw 7vw;
+  }
+
+  .logo{
+    max-width: 920px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 4vh;
+  }
+
+  .divider{
+    width: 90px;
+    height: 6px;
+    background: var(--orange);
+    margin-bottom: 2.2rem;
+  }
+
+  h1{
+    font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: clamp(2rem, 3.4vw, 3.1rem);
+    line-height: 1.12;
+    letter-spacing: 0.5px;
+    color: var(--text-dark);
+    margin-bottom: 1.6rem;
+  }
+
+  .subhead{
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: clamp(1.3rem, 1.7vw, 1.65rem);
+    color: var(--text-gray);
+    line-height: 1.5;
+    margin-bottom: 3rem;
+    max-width: 620px;
+  }
+
+  .email-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--navy);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 1.15rem 2.4rem;
+    width: fit-content;
+    transition: background 0.2s ease, transform 0.15s ease;
+  }
+
+  .email-btn:hover{
+    background: var(--navy-dark);
+    transform: translateY(-1px);
+  }
+
+  .email-btn:focus-visible{
+    outline: 3px solid var(--orange);
+    outline-offset: 3px;
+  }
+
+  .hero-photo{
+    background-size: cover;
+    background-position: center;
+    background-image: url('hero.jpg');
+  }
+
+  /* Footer strip */
+  footer{
+    background: var(--navy);
+    color: #cfd6e0;
+    text-align: center;
+    padding: 1.4rem 1rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+  }
+
+  footer a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  footer a:hover{ text-decoration: underline; }
+
+  @media (max-width: 860px){
+    .hero{
+      grid-template-columns: 1fr;
+    }
+    .hero-photo{
+      min-height: 45vh;
+      order: -1;
+    }
+    .hero-content{
+      padding: 10vw 8vw;
+    }
+    .logo{
+      max-width: 440px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .email-btn{ transition: none; }
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-content">
+      <img class="logo" src="logo.png" alt="AXE20 Logistique">
+
+      <div class="divider"></div>
+
+      <h1>Entreposage sécurisé de remorques, conteneurs et équipements</h1>
+
+      <p class="subhead">Secure trailer, container &amp; equipment yards</p>
+
+      <a class="email-btn" href="mailto:info@axe20.com?subject=Demande%20d%27information%20-%20AXE20%20Logistique">
+        Info@axe20.com
+      </a>
+    </div>
+
+    <div class="hero-photo" role="img" aria-label="Vue aérienne de la cour d'entreposage AXE20 Logistique avec remorques stationnées"></div>
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> AXE20 Logistique · <a href="mailto:info@axe20.com">info@axe20.com</a>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
